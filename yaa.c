@@ -1,19 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int n,original,reverse = 0,remainder;
-    printf("enter a number: ");
-    scanf("%d, &n");
-    original = n;
-    while(n!=0)
-    {
-        remainder = n % 10;
-        reverse =  reverse * 10 + remainder;
-        n = n /10;
-    }
-    if(original == reverse)
-        printf("%d is a pallindrome number.\n",original);
-    else
-        printf("%d is not a pallindorme number.\n",original);
-    return 0;
+    int a[5];
+    scanf("%d",&a[0]);
+    scanf("%d",&a[1]);
+    scanf("%d",&a[2]);
+    scanf("%d",&a[3]);
+    scanf("%d",&a[4]);
+    printf("your elements are: ");
+    printf("%d",a[0]);
+    printf("%d",a[1]);
+    printf("%d",a[2]);
+    printf("%d",a[3]);
+    printf("%d",a[4]);
+return 0;
 }

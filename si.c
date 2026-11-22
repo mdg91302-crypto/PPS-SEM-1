@@ -1,34 +1,21 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
 int main()
 {
-
-    float a, b, c, d, root1, root2, root3, real, imag;
-    printf("enter values of a, b and c: ");
-    scanf("%f %f %f", &a, &b, &c);
-    d = b * b - 4 * a * c;
-    if (d > 0)
+    int n;
+    printf("how many elements you want: ");
+    scanf("%d",&n);
+    int a[n],i,sum=0;
+    printf("enter %d elements: ",n);
+    for(i=0;i<n;i++)
     {
-        root1 = (-b + sqrt(d)) / (2 * a);
-        root2 = (-b + sqrt(d)) / (2 * a);
-        printf("roots are real and different.\n");
-        printf("root1 = %.2f\n", root1);
-        printf("root2 = %.2f\n", root2);
+        scanf("%d",&a[i]);
+        sum= sum+a[i];
     }
-    else if (d == 0)
+    printf("your elements are: ");
+    for(i=0;i<n;i++)
     {
-        root1 = -b / (2 * a);
-        printf("roots are real and equal.\n");
-        printf("root1 = root 2 = %.2f\n",root1);
+        printf("%d, ",a[i]);
     }
-    else
-    {
-        real = -b / (2 * a);
-        imag = sqrt(-d) / (2 * a);
-        printf("roots are complex and different.\n");
-        printf("root1 = %.2f + %.2fi\n", real, imag);
-        printf("root2 = %.2f + %.2fi\n", real, imag);
-    }
-
+    printf("\nSum of %d elements are: %d", n, sum);
     return 0;
 }
